@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="410" viewBox="0 0 960 410" role="img" aria-labelledby="title desc">
+<title id="title">Bootstrap rerun benchmark</title>
+<desc id="desc">Measured validation result from the development test suite.</desc>
+<style>
+  text { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif; fill:#172033; }
+  .title { font-size:24px; font-weight:700; }
+  .sub { font-size:14px; fill:#5b6472; }
+  .label { font-size:14px; font-weight:600; }
+  .value { font-size:13px; }
+  .card { fill:#f7f8fb; stroke:#d8dde7; stroke-width:1; rx:12; }
+  .ok { fill:#e9f8ef; stroke:#7bc89b; stroke-width:1; }
+  .accent { fill:#4f67d8; }
+  .bar2 { fill:#98a5df; }
+  .grid { stroke:#e4e7ee; stroke-width:1; }
+  .arrow { stroke:#6b7280; stroke-width:2; fill:none; marker-end:url(#arrow); }
+</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#6b7280"/></marker></defs>
+<text x="32" y="42" class="title">Healthy bootstrap rerun</text>
+<text x="32" y="67" class="sub">Same tested machine; package/network refreshes disabled in normal SMART-REPAIR</text>
+<text x="32" y="135" class="label">V4.8.1 healthy rerun</text>
+<rect x="235" y="115" width="650.0" height="34" rx="6" class="bar2"/>
+<text x="895.0" y="138" class="value">20.9 s</text>
+<text x="32" y="225" class="label">V4.8.2 smart rerun</text>
+<rect x="235" y="205" width="90.2" height="34" rx="6" class="accent"/>
+<text x="335.2" y="228" class="value">2.9 s</text>
+<rect x="32" y="315" width="860" height="62" class="ok" rx="12"/>
+<text x="52" y="342" class="label">Measured reduction</text>
+<text x="52" y="366" class="value">86.1% faster rerun in this validation run; repo tree scan and plugin/MCP runtime startup were skipped.</text>
+</svg>

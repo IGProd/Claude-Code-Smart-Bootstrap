@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="455" viewBox="0 0 920 455" role="img" aria-labelledby="title desc">
+<title id="title">Behavioral validation matrix</title>
+<desc id="desc">Measured validation result from the development test suite.</desc>
+<style>
+  text { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif; fill:#172033; }
+  .title { font-size:24px; font-weight:700; }
+  .sub { font-size:14px; fill:#5b6472; }
+  .label { font-size:14px; font-weight:600; }
+  .value { font-size:13px; }
+  .card { fill:#f7f8fb; stroke:#d8dde7; stroke-width:1; rx:12; }
+  .ok { fill:#e9f8ef; stroke:#7bc89b; stroke-width:1; }
+  .accent { fill:#4f67d8; }
+  .bar2 { fill:#98a5df; }
+  .grid { stroke:#e4e7ee; stroke-width:1; }
+  .arrow { stroke:#6b7280; stroke-width:2; fill:none; marker-end:url(#arrow); }
+</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#6b7280"/></marker></defs>
+<text x="32" y="42" class="title">Behavioral validation matrix</text>
+<text x="32" y="67" class="sub">These were functional tests, not only config-file checks</text>
+<rect x="32" y="95" width="840" height="31" class="ok"/>
+<text x="48" y="116" class="value">Global config / Sonnet medium / limits</text>
+<text x="800" y="116" class="label">PASS</text>
+<rect x="32" y="137" width="840" height="31" class="ok"/>
+<text x="48" y="158" class="value">Graft CLI + MCP functional</text>
+<text x="800" y="158" class="label">PASS</text>
+<rect x="32" y="179" width="840" height="31" class="ok"/>
+<text x="48" y="200" class="value">Context Mode cross-session marker</text>
+<text x="800" y="200" class="label">PASS</text>
+<rect x="32" y="221" width="840" height="31" class="ok"/>
+<text x="48" y="242" class="value">project-state issue/decision/rationale</text>
+<text x="800" y="242" class="label">PASS</text>
+<rect x="32" y="263" width="840" height="31" class="ok"/>
+<text x="48" y="284" class="value">visual cache exact cross-session hit</text>
+<text x="800" y="284" class="label">PASS</text>
+<rect x="32" y="305" width="840" height="31" class="ok"/>
+<text x="48" y="326" class="value">smart installer idempotence</text>
+<text x="800" y="326" class="label">PASS</text>
+<rect x="32" y="347" width="840" height="31" class="ok"/>
+<text x="48" y="368" class="value">first-tool latency diagnosis</text>
+<text x="800" y="368" class="label">PASS</text>
+<rect x="32" y="389" width="840" height="31" class="ok"/>
+<text x="48" y="410" class="value">optimized rerun / repo-scan skip</text>
+<text x="800" y="410" class="label">PASS</text>
+</svg>

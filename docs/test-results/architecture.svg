@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="405" viewBox="0 0 960 405" role="img" aria-labelledby="title desc">
+<title id="title">Architecture overview</title>
+<desc id="desc">Measured validation result from the development test suite.</desc>
+<style>
+  text { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif; fill:#172033; }
+  .title { font-size:24px; font-weight:700; }
+  .sub { font-size:14px; fill:#5b6472; }
+  .label { font-size:14px; font-weight:600; }
+  .value { font-size:13px; }
+  .card { fill:#f7f8fb; stroke:#d8dde7; stroke-width:1; rx:12; }
+  .ok { fill:#e9f8ef; stroke:#7bc89b; stroke-width:1; }
+  .accent { fill:#4f67d8; }
+  .bar2 { fill:#98a5df; }
+  .grid { stroke:#e4e7ee; stroke-width:1; }
+  .arrow { stroke:#6b7280; stroke-width:2; fill:none; marker-end:url(#arrow); }
+</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#6b7280"/></marker></defs>
+<text x="32" y="42" class="title">Persistent-context + code-intelligence architecture</text>
+<text x="32" y="67" class="sub">Different layers own different kinds of state to avoid repeating expensive work</text>
+<rect x="35" y="110" width="170" height="95" class="card"/>
+<text x="50" y="142" class="label">Context Mode</text>
+<text x="50" y="168" class="value">session/history search</text>
+<rect x="225" y="110" width="170" height="95" class="card"/>
+<text x="240" y="142" class="label">Auto Memory</text>
+<text x="240" y="168" class="value">small durable learnings</text>
+<rect x="415" y="110" width="170" height="95" class="card"/>
+<text x="430" y="142" class="label">project-state</text>
+<text x="430" y="168" class="value">issues · decisions · visuals</text>
+<rect x="605" y="110" width="145" height="95" class="card"/>
+<text x="620" y="142" class="label">Graft</text>
+<text x="620" y="168" class="value">live code structure</text>
+<rect x="770" y="110" width="155" height="95" class="card"/>
+<text x="785" y="142" class="label">Graphify</text>
+<text x="785" y="168" class="value">broader knowledge</text>
+<path d="M120 225 L120 285" class="arrow"/>
+<path d="M310 225 L310 285" class="arrow"/>
+<path d="M500 225 L500 285" class="arrow"/>
+<path d="M680 225 L680 285" class="arrow"/>
+<path d="M847 225 L847 285" class="arrow"/>
+<rect x="120" y="295" width="720" height="70" class="ok"/>
+<text x="145" y="324" class="label">Claude Code session</text>
+<text x="145" y="348" class="value">Main: Sonnet/medium · visual worker: Sonnet/high · bounded Opus/high QA when needed</text>
+</svg>

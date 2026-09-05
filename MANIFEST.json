@@ -1,0 +1,95 @@
+{
+  "version": "4.9.0-public",
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "bb8636e45224a30a6bf6c0885b3cfa3d19b213140e57755de66fd9a450672a07",
+      "bytes": 205
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "58a154a031d4b5f0eca5bcbb4c1244d4948d84a11d6814960be831bc7039e264",
+      "bytes": 16
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "23cc9de00321675d83d0835ed54d035ff3deb17257f8a9d5ae9da37f233918da",
+      "bytes": 621
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "ad874f09ea318e4ada36fe136ccac8e7225dac3544dd813e556150e5c0b86f5c",
+      "bytes": 501
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "6d527433b065a5c3e3f125af598d209af04ed3cc8080f4f6923e51c93e548eb5",
+      "bytes": 1097
+    },
+    {
+      "path": "README.md",
+      "sha256": "646951023a669e488783e4c9fad91f3efd7f6e44c198e8f2b806fc133953246f",
+      "bytes": 9875
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "38d438e019cb386ad7ab65818f6efeb6ac960be7fdc1aefdd6890a2230373a58",
+      "bytes": 609
+    },
+    {
+      "path": "claude-smart-bootstrap.sh",
+      "sha256": "0c67c79e1e4ae28afbaa4bdf578a8c644a8a06c7ea87b9840b44f25ef657c07e",
+      "bytes": 98192
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "d697ed0e282bb6626ef7bb1b5486f139eb2f68a82d92318cd01abb469961b7b5",
+      "bytes": 1365
+    },
+    {
+      "path": "docs/TEST-RESULTS.md",
+      "sha256": "55d4b943c5355ae1ef463125308030f0646b8d1d5b66526e73d46b136ed0b69c",
+      "bytes": 4584
+    },
+    {
+      "path": "docs/test-results/architecture.svg",
+      "sha256": "d7101a29b4773388389b230f9172f7ef9784ed2f01d76a242f635dae61b5554b",
+      "bytes": 2579
+    },
+    {
+      "path": "docs/test-results/bootstrap-rerun.svg",
+      "sha256": "a943eb66dd8ac8e3ac5157b63d8d34ccfea319fe79238cd3ae9e1d7a5046f853",
+      "bytes": 1821
+    },
+    {
+      "path": "docs/test-results/first-tool-latency.svg",
+      "sha256": "29246751e5888c33b7afa38e0b351e3c33b005e5c21dea4b1ee6f5fcd7a58cfb",
+      "bytes": 2399
+    },
+    {
+      "path": "docs/test-results/measured-results.json",
+      "sha256": "042eb19dcd48d1e6155fd9c67d83c13d55f78fb90271b7b87515863b3df14a3f",
+      "bytes": 1736
+    },
+    {
+      "path": "docs/test-results/validation-matrix.svg",
+      "sha256": "c3787ffbbf3e8cc493f9548596bbe7357e5cb44b64a1d73826bf896e390e8b0c",
+      "bytes": 2616
+    },
+    {
+      "path": "docs/test-results/visual-cache-flow.svg",
+      "sha256": "f0ab6f1a4b6dc4cba29e65e037c6d9a7b4c2ddb2711fce717415582c12abfbad",
+      "bytes": 2524
+    },
+    {
+      "path": "examples/users.env.example",
+      "sha256": "b45ae79a22b50a242ba68d18d2e3c0df4bade518563a2fbfc9a6dbadeedc3fa2",
+      "bytes": 40
+    },
+    {
+      "path": "tests/static-check.sh",
+      "sha256": "529f3b4a07a45bfe8e42618f7da3c562c161d421325b545bf8c3aa44a2b42470",
+      "bytes": 1638
+    }
+  ]
+}

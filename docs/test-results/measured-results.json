@@ -1,0 +1,62 @@
+{
+  "note": "Sanitized measurements from the development validation run; usernames/hostnames/repository-specific markers are intentionally omitted.",
+  "tests": {
+    "global_config": {
+      "model": "claude-sonnet-5",
+      "effort": "medium",
+      "auto_compact_window": 350000,
+      "auto_memory": true,
+      "context_mode_connected": true,
+      "graft_mcp_connected": true,
+      "max_concurrent_subagents": 2,
+      "max_subagent_spawn_depth": 2
+    },
+    "graft_functional": {
+      "mcp_query": "PASS",
+      "graft_map": "PASS",
+      "graft_ask": "PASS",
+      "segmentation_fault": false,
+      "connection_closed": false,
+      "graft_version": "0.16.0"
+    },
+    "context_cross_session": {
+      "exact_marker_recovered": true,
+      "source": "Context Mode persistent history"
+    },
+    "project_state_cross_session": {
+      "issue": true,
+      "decision": true,
+      "rationale": true
+    },
+    "visual_cache": {
+      "step_a": {
+        "status": "NEW",
+        "full_sheet_analysis": true,
+        "image_tool_result_chars_approx": 441718,
+        "screen_crops": 4
+      },
+      "step_b": {
+        "status": "EXACT_HIT",
+        "tool_calls": 4,
+        "tool_result_chars_approx": 3128,
+        "image_opened": false,
+        "full_spec_dumped": false
+      }
+    },
+    "pretooluse_latency_ms": {
+      "first_true_overhead": 17167,
+      "second_true_overhead": 348,
+      "graft_map_1_overhead": 318,
+      "graft_map_2_overhead": 390,
+      "graft_ask_1_overhead": 314,
+      "graft_ask_2_overhead": 359,
+      "recurring_latency": false,
+      "cold_start_pattern": true,
+      "graft_specific": false
+    },
+    "bootstrap_rerun_seconds": {
+      "v4.8.1": 20.887,
+      "v4.8.2": 2.9
+    }
+  }
+}

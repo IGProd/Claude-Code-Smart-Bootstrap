@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" role="img" aria-labelledby="title desc">
+<title id="title">First-tool latency benchmark</title>
+<desc id="desc">Measured validation result from the development test suite.</desc>
+<style>
+  text { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif; fill:#172033; }
+  .title { font-size:24px; font-weight:700; }
+  .sub { font-size:14px; fill:#5b6472; }
+  .label { font-size:14px; font-weight:600; }
+  .value { font-size:13px; }
+  .card { fill:#f7f8fb; stroke:#d8dde7; stroke-width:1; rx:12; }
+  .ok { fill:#e9f8ef; stroke:#7bc89b; stroke-width:1; }
+  .accent { fill:#4f67d8; }
+  .bar2 { fill:#98a5df; }
+  .grid { stroke:#e4e7ee; stroke-width:1; }
+  .arrow { stroke:#6b7280; stroke-width:2; fill:none; marker-end:url(#arrow); }
+</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#6b7280"/></marker></defs>
+<text x="32" y="42" class="title">First-tool latency benchmark</text>
+<text x="32" y="67" class="sub">Measured end-to-end overhead; one cold-start spike, then stable ~0.3–0.4s</text>
+<text x="32" y="123" class="label">1st `true`</text>
+<rect x="190" y="105" width="650.0" height="24" rx="5" class="accent"/>
+<text x="850.0" y="122" class="value">17,167 ms</text>
+<text x="32" y="171" class="label">2nd `true`</text>
+<rect x="190" y="153" width="13.2" height="24" rx="5" class="accent"/>
+<text x="213.2" y="170" class="value">348 ms</text>
+<text x="32" y="219" class="label">Graft map #1</text>
+<rect x="190" y="201" width="12.0" height="24" rx="5" class="accent"/>
+<text x="212.0" y="218" class="value">318 ms</text>
+<text x="32" y="267" class="label">Graft map #2</text>
+<rect x="190" y="249" width="14.8" height="24" rx="5" class="accent"/>
+<text x="214.8" y="266" class="value">390 ms</text>
+<text x="32" y="315" class="label">Graft ask #1</text>
+<rect x="190" y="297" width="11.9" height="24" rx="5" class="accent"/>
+<text x="211.9" y="314" class="value">314 ms</text>
+<text x="32" y="363" class="label">Graft ask #2</text>
+<rect x="190" y="345" width="13.6" height="24" rx="5" class="accent"/>
+<text x="213.6" y="362" class="value">359 ms</text>
+<text x="32" y="410" class="sub">Conclusion: recurring PreToolUse latency = NO · cold-start pattern = YES · Graft-specific latency = NO</text>
+</svg>
