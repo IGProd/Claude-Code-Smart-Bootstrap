@@ -2,9 +2,7 @@
 
 > **Persistent context, token-aware code exploration, reusable visual references, and fast self-repair for Claude Code on Linux/WSL.**
 
-![Behavioral validation](docs/test-results/validation-matrix.svg)
-
-`claude-smart-bootstrap.sh` is a public, multi-user version of a production bootstrap that was iteratively tested against real Claude Code sessions. It is designed for developers who run Claude Code across multiple Git repositories and want to reduce repeated setup, repeated code exploration, repeated screenshot analysis, and unnecessary package/plugin work.
+`claude-smart-bootstrap.sh` is a multi-user production bootstrap for Claude Code. It is designed for developers who run Claude Code across multiple Git repositories and want to reduce repeated setup, repeated code exploration, repeated screenshot analysis, and unnecessary package/plugin work.
 
 ## What problem does it solve?
 
@@ -23,15 +21,15 @@ This project gives those concerns separate owners:
 
 ## What it configures
 
-- ✅ Claude Code native CLI for selected Linux users
+- ✅ [Claude Code](https://github.com/anthropics/claude-code) native CLI for selected Linux users
 - ✅ Sonnet + medium as the stable main-session default
 - ✅ Auto Memory
 - ✅ 350,000-token auto-compaction calculation window
 - ✅ deferred MCP tool loading / tool search
-- ✅ Context Mode for searchable persistent session history
-- ✅ Graft for live code structure, callers, dependencies, blast radius
-- ✅ Graphify for broader code/docs/config knowledge when useful
-- ✅ Caveman plugin for concise output
+- ✅ [Context Mode](https://github.com/mksglu/context-mode) for searchable persistent session history
+- ✅ [Graft](https://github.com/trailhq/Graft) for live code structure, callers, dependencies, blast radius
+- ✅ [Graphify](https://github.com/Graphify-Labs/graphify) for broader code/docs/config knowledge when useful
+- ✅ [Caveman](https://github.com/JuliusBrussee/caveman) plugin for concise output
 - ✅ `claude-project-state` for solved issues, decisions/rationale, visual references
 - ✅ content-addressed visual cache (SHA-256 + compact spec/crops)
 - ✅ Android/ADB local visual tooling
@@ -60,8 +58,8 @@ The visual pieces are Android/mobile-oriented, but the context, memory, Graft, G
 ## Quick start
 
 ```bash
-git clone <YOUR-GITHUB-REPO-URL>
-cd claude-code-smart-bootstrap
+git clone https://github.com/IGProd/Claude-Code-Smart-Bootstrap.git
+cd Claude-Code-Smart-Bootstrap
 chmod +x claude-smart-bootstrap.sh
 
 sudo ./claude-smart-bootstrap.sh --users root,alice
@@ -72,8 +70,6 @@ Multiple users are comma-separated:
 ```bash
 sudo ./claude-smart-bootstrap.sh --users root,alice,bob
 ```
-
-The public script has **no private username hard-coded**.
 
 ### Default user behavior
 
@@ -144,43 +140,15 @@ repo inventory current    → no full filesystem tree scan
 
 `--update` is the explicit opt-in for rolling package/plugin/vendor updates.
 
-## Real behavioral test results
-
-The project includes sanitized results from the validation run, not only claims from configuration files.
-
-![Bootstrap rerun](docs/test-results/bootstrap-rerun.svg)
-
-On the tested machine, a healthy repeated run went from roughly **20.887 s** to **2.90 s** after removing repeated plugin/MCP runtime checks and repeated repository scanning.
-
-### First-tool / PreToolUse diagnosis
-
-![First-tool latency](docs/test-results/first-tool-latency.svg)
-
-A suspicious ~17 s delay was measured and isolated. The spike happened only on the **first Bash tool call in a fresh session**. Subsequent Bash and Graft calls settled around ~0.3–0.4 s of measured wrapper overhead. It was **not recurring** and **not Graft-specific**, so the script intentionally does not add a wasteful warm-up.
-
-### Visual-reference cache
-
-![Visual cache](docs/test-results/visual-cache-flow.svg)
-
-The same local design sheet was tested across sessions:
-
-- first encounter: analyze/register once;
-- exact later encounter: SHA-256 hit;
-- no image open/vision pass;
-- stored spec/crops reused;
-- only ~3.1k characters of tool-result output in the HIT turn.
-
-See [docs/TEST-RESULTS.md](docs/TEST-RESULTS.md) and [measured-results.json](docs/test-results/measured-results.json) for the measured data and methodology.
-
 ## Persistent context: who owns what?
 
 | Layer | Responsibility |
 |---|---|
-| **Context Mode** | Searchable session/history retrieval and large-output virtualization |
+| **[Context Mode](https://github.com/mksglu/context-mode)** | Searchable session/history retrieval and large-output virtualization |
 | **Auto Memory** | Small durable learnings |
 | **claude-project-state** | Confirmed solved issues, decisions/rationale, visual references |
-| **Graft** | Current code structure, symbols, callers/dependencies |
-| **Graphify** | Broader code/docs/config knowledge when useful |
+| **[Graft](https://github.com/trailhq/Graft)** | Current code structure, symbols, callers/dependencies |
+| **[Graphify](https://github.com/Graphify-Labs/graphify)** | Broader code/docs/config knowledge when useful |
 | **Visual cache** | Exact-image reuse, compact design specs, crops and local diff workflow |
 
 The goal is **complementary layers**, not forcing every task through every tool.
@@ -250,6 +218,20 @@ graft/
 Graphify post-commit hook
 ```
 
+## Upstream projects
+
+Claude Code Smart Bootstrap coordinates existing tools; it does not replace them. Visit the upstream repositories for their own documentation, releases, licenses, and issue trackers.
+
+| Project | Repository | Used here for |
+|---|---|---|
+| Claude Code | [anthropics/claude-code](https://github.com/anthropics/claude-code) | Main coding-agent runtime |
+| Context Mode | [mksglu/context-mode](https://github.com/mksglu/context-mode) | Persistent/searchable context and large-output virtualization |
+| Graft | [trailhq/Graft](https://github.com/trailhq/Graft) | Live code structure and dependency/caller exploration |
+| Graphify | [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) | Broader code/docs/config graph support |
+| Caveman | [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) | Concise response behavior |
+| Node.js | [nodejs/node](https://github.com/nodejs/node) | Runtime required by parts of the stack |
+| uv | [astral-sh/uv](https://github.com/astral-sh/uv) | Python/tool environment management |
+
 ## Requirements / safety
 
 Designed for **Linux / WSL** with root/sudo access.
@@ -286,8 +268,6 @@ CI runs the same static checks on push and pull request.
 ## Documentation
 
 - [Architecture](docs/ARCHITECTURE.md)
-- [Behavioral test results](docs/TEST-RESULTS.md)
-- [Measured test data (JSON)](docs/test-results/measured-results.json)
 - [Security notes](SECURITY.md)
 - [Changelog](CHANGELOG.md)
 
