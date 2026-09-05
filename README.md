@@ -57,6 +57,8 @@ The visual pieces are Android/mobile-oriented, but the context, memory, Graft, G
 
 ## Quick start
 
+> **How to work with Claude after installation:** see the [Usage Guide](USAGE.md) for prompt patterns, reusable design references, new-session workflow, and token-aware habits.
+
 ```bash
 git clone https://github.com/IGProd/Claude-Code-Smart-Bootstrap.git
 cd Claude-Code-Smart-Bootstrap
@@ -267,6 +269,7 @@ CI runs the same static checks on push and pull request.
 
 ## Documentation
 
+- [Usage guide](USAGE.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [Security notes](SECURITY.md)
 - [Changelog](CHANGELOG.md)
